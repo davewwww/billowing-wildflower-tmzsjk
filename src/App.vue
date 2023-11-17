@@ -1,8 +1,13 @@
 <script setup lang="ts">
-import HelloWorld from "./components/HelloWorld.vue";
+
+//no tsc error
+import { computeLabel } from "@jsonforms/core";
+
+//throws tsc error
+//import { computeLabel } from "@jsonforms/core/src/util/renderer";
 </script>
 
 <template>
-  <HelloWorld msg="Hello World" />
+  {{ computeLabel("name", true, true) }}
 </template>
 
